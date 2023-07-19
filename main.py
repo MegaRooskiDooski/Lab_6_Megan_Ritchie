@@ -1,4 +1,5 @@
 from encode_pass import encode
+from decode_pass import decode
 
 if __name__ == "__main__":
     while True:
@@ -9,7 +10,8 @@ if __name__ == "__main__":
             encoded_pass = encode(password)
             print("Your password has been encoded and stored!")
         elif option == 2:
-            print(f"The encoded password is {encoded_pass}, and the original password is {password}.")
+            decoded_pass = decode(encoded_pass)
+            print(f"The encoded password is {encoded_pass}, and the original password is {decoded_pass}.")
         elif option == 3:
             break
 
